@@ -212,13 +212,13 @@ This question will be graded according to three criteria:
 
 ### Solution
 
-- [The Reuters Corpus](5.%20Market%20segmentation/MarketSegmentation.ipynb)
+- [The Reuters Corpus](6.%20The%20Reuters%20corpus/ReutersCorpus.ipynb)
 
 
 # ----------------------------------------------------
-## Association rule mining
+## Association Rule Mining
 
-Revisit the notes on association rule mining and the R example on music playlists: [playlists.R](../R/playlists.R) and [playlists.csv](../data/playlists.csv).  Then use the data on grocery purchases in [groceries.txt](../data/groceries.txt) and find some interesting association rules for these shopping baskets.  The data file is a list of shopping baskets: one person's basket for each row, with multiple items per row separated by commas.  Pick your own thresholds for lift and confidence; just be clear what these thresholds are and say why you picked them.  Do your discovered item sets make sense?  Present your discoveries in an interesting and visually appealing way.  
+Revisit the notes on association rule mining and the R example on music playlists: [playlists.R](7.%20Association%20rule%20mining/playlists.R) and [playlists.csv](7.%20Association%20rule%20mining/playlists.csv).  Then use the data on grocery purchases in [groceries.txt](7.%20Association%20rule%20mining/groceries.txt) and find some interesting association rules for these shopping baskets.  The data file is a list of shopping baskets: one person's basket for each row, with multiple items per row separated by commas.  Pick your own thresholds for lift and confidence; just be clear what these thresholds are and say why you picked them.  Do your discovered item sets make sense?  Present your discoveries in an interesting and visually appealing way.  
  
 
 Notes: 
@@ -226,6 +226,8 @@ Notes:
 - The data file is a list of baskets: one row per basket, with multiple items per row separated by commas.  You'll have to cobble together your own code for processing this into the format expected by the "arules" package.  This is not intrinsically all that hard, but it is the kind of data-wrangling wrinkle you'll encounter frequently on real problems, where your software package expects data in one format and the data comes in a different format.  Figuring out how to bridge that gap is part of the assignment, and so we won't be giving tips on this front.  
 
 ### Solution
+
+ - [Association Rule Mining](7.%20Association%20rule%20mining/AssociationRuleMining.ipynb)
 
 
 # ----------------------------------------------------
@@ -242,3 +244,6 @@ Your job is to set up a neural network that can classify the images as accuratel
 I strongly recommend the use of PyTorch in a Jupyter notebook for this problem; look into PyTorch's `ImageFolder` data set class, which will streamline things considerably.  
 
 
+### Solution
+
+ - [Image classification with neural networks](8.%20Image%20classification%20with%20neural%20networks/Image%20classification%20with%20neural%20networks.ipynb)
