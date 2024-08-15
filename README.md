@@ -13,13 +13,13 @@ Suppose someone tests positive. What is the probability that they have the disea
 
 ### Solution 
 
-- [Probability Solution](../exercises/0.%20Probability/Probability.ipynb)
+- [Probability Solution](0.%20Probability/Probability.ipynb)
 
 
 # ----------------------------------------------------
 ## Wrangling the Billboard Top 100
 
-Consider the data in [billboard.csv](../exercises/1.%20Wrangling%20the%20Billboard/billboard.csv) containing every song to appear on the weekly [Billboard Top 100](https://www.billboard.com/charts/hot-100/) chart since 1958, up through the middle of 2021.  Each row of this data corresponds to a single song in a single week.  For our purposes, the relevant columns here are:
+Consider the data in [billboard.csv](1.%20Wrangling%20the%20Billboard/billboard.csv) containing every song to appear on the weekly [Billboard Top 100](https://www.billboard.com/charts/hot-100/) chart since 1958, up through the middle of 2021.  Each row of this data corresponds to a single song in a single week.  For our purposes, the relevant columns here are:
 
 - performer: who performed the song
 - song: the title of the song
@@ -53,7 +53,7 @@ _Notes_:
 
 ### Solution
 
-- [Wrangling the Billboard Top 100](../exercises/1.%20Wrangling%20the%20Billboard/Wrangling%20the%20Billboard.ipynb)
+- [Wrangling the Billboard Top 100](1.%20Wrangling%20the%20Billboard/Wrangling%20the%20Billboard.ipynb)
 
 
 
@@ -71,7 +71,7 @@ Over the past decade, both investors and the general public have paid increasing
 
 Of course, much of this is mere conjecture. At the end of the day, tenants may or may not be willing to pay a premium for rental space in green buildings. We can only find out by carefully examining data on the commercial real-estate market.  
 
-The file [greenbuildings.csv](../exercises/2.%20Visual%20story%20telling%20part%201%20green%20buildings/greenbuildings.csv) contains data on 7,894 commercial rental properties from across the United States. Of these, 685 properties have been awarded either LEED or EnergyStar certification as a green building. You can easily find out more about these rating systems on the web, e.g. at www.usgbc.org. The basic idea is that a commercial property can receive a green certification if its energy efficiency, carbon footprint, site selection, and building materials meet certain environmental benchmarks, as certified by outside engineers.
+The file [greenbuildings.csv](2.%20Visual%20story%20telling%20part%201%20green%20buildings/greenbuildings.csv) contains data on 7,894 commercial rental properties from across the United States. Of these, 685 properties have been awarded either LEED or EnergyStar certification as a green building. You can easily find out more about these rating systems on the web, e.g. at www.usgbc.org. The basic idea is that a commercial property can receive a green certification if its energy efficiency, carbon footprint, site selection, and building materials meet certain environmental benchmarks, as certified by outside engineers.
 
 A group of real estate economists constructed the data in the following way.  Of the 1,360 green-certified buildings listed as of December 2007 on the LEED or EnergyStar websites, current information about building characteristics and monthly rents were available for 685 of them.  In order to provide a control population, each of these 685 buildings was matched to a cluster of nearby commercial buildings in the CoStar database.  Each small cluster contains one green-certified building, and all non-rated buildings within a quarter-mile radius of the certified building.  On average, each of the 685 clusters contains roughly 12 buildings, for a total of 7,894 data points.
 
@@ -120,14 +120,14 @@ Note: this is intended as an exercise in visual and numerical story-telling. You
 
 ### Solution
 
-- [Green Building](../exercises/2.%20Visual%20story%20telling%20part%201%20green%20buildings/GreenBuildings.ipynb)
+- [Green Building](2.%20Visual%20story%20telling%20part%201%20green%20buildings/GreenBuildings.ipynb)
 
 
 
 # ----------------------------------------------------
 ## Visual story telling part 2: Capital Metro data
 
-The file [capmetro_UT.csv](../exercises/3.%20Visual%20story%20telling%20part%202%20Capital%20Metro%20data/capmetro_UT.csv) contains data from Austin's own Capital Metro bus network, including shuttles to, from, and around the UT campus. These data track ridership on buses in the UT area. Ridership is measured by an optical scanner that counts how many people embark and alight the bus at each stop. Each row in the data set corresponds to a 15-minute period between the hours of 6 AM and 10 PM, each and every day, from September through November 2018. The variables are:  
+The file [capmetro_UT.csv](3.%20Visual%20story%20telling%20part%202%20Capital%20Metro%20data/capmetro_UT.csv) contains data from Austin's own Capital Metro bus network, including shuttles to, from, and around the UT campus. These data track ridership on buses in the UT area. Ridership is measured by an optical scanner that counts how many people embark and alight the bus at each stop. Each row in the data set corresponds to a 15-minute period between the hours of 6 AM and 10 PM, each and every day, from September through November 2018. The variables are:  
 
 - _timestamp_: the beginning of the 15-minute window for that row of data
 - _boarding_: how many people got on board any Capital Metro bus on the UT campus in the specific 15 minute window
@@ -143,14 +143,14 @@ You have broad freedom to look at any variables you'd like here -- try to find t
 
 ### Solution
 
-- [Capital Metro](../exercises/3.%20Visual%20story%20telling%20part%202%20Capital%20Metro%20data/CapitalUT.ipynb)
+- [Capital Metro](3.%20Visual%20story%20telling%20part%202%20Capital%20Metro%20data/CapitalUT.ipynb)
 
 
 
 # ----------------------------------------------------
 ## Clustering and Dimensionality Reduction
 
-The data in [wine.csv](../exercises/4.%20Clustering%20and%20dimensionality%20reduction/wine.csv) contains information on 11 chemical properties of 6500 different bottles of _vinho verde_ wine from northern Portugal.  In addition, two other variables about each wine are recorded:
+The data in [wine.csv](4.%20Clustering%20and%20dimensionality%20reduction/wine.csv) contains information on 11 chemical properties of 6500 different bottles of _vinho verde_ wine from northern Portugal.  In addition, two other variables about each wine are recorded:
 - whether the wine is red or white  
 - the quality of the wine, as judged on a 1-10 scale by a panel of certified wine snobs.  
 
@@ -160,24 +160,24 @@ To clarify: I'm not asking you to run a supervised learning algorithms.  Rather,
 
 ### Solution
 
-- [Clustering and Dimensionality Reduction](../exercises/4.%20Clustering%20and%20dimensionality%20reduction/Clustering%20and%20Dimensionality.ipynb)
+- [Clustering and Dimensionality Reduction](4.%20Clustering%20and%20dimensionality%20reduction/Clustering%20and%20Dimensionality.ipynb)
 
 
 
 # ----------------------------------------------------
 ## Market Segmentation
 
-Consider the data in [social_marketing.csv](../exercises/5.%20Market%20segmentation/social_marketing.csv).  This was data collected in the course of a market-research study using followers of the Twitter account of a large consumer brand that shall remain nameless---let's call it "NutrientH20" just to have a label.  The goal here was for NutrientH20 to understand its social-media audience a little bit better, so that it could hone its messaging a little more sharply.
+Consider the data in [social_marketing.csv](5.%20Market%20segmentation/social_marketing.csv).  This was data collected in the course of a market-research study using followers of the Twitter account of a large consumer brand that shall remain nameless---let's call it "NutrientH20" just to have a label.  The goal here was for NutrientH20 to understand its social-media audience a little bit better, so that it could hone its messaging a little more sharply.
 
 A bit of background on the data collection: the advertising firm who runs NutrientH20's online-advertising campaigns took a sample of the brand's Twitter followers.  They collected every Twitter post ("tweet") by each of those followers over a seven-day period in June 2014.  Every post was examined by a human annotator contracted through [Amazon's Mechanical Turk](https://www.mturk.com/mturk/welcome) service.  Each tweet was categorized based on its content using a pre-specified scheme of 36 different categories, each representing a broad area of interest (e.g. politics, sports, family, etc.)  Annotators were allowed to classify a post as belonging to more than one category.  For example, a hypothetical post such as "I'm really excited to see grandpa go wreck shop in his geriatic soccer league this Sunday!" might be categorized as both "family" and "sports."  You get the picture.
 
-Each row of [social_marketing.csv](../exercises/5.%20Market%20segmentation/social_marketing.csv) represents one user, labeled by a random (anonymous, unique) 9-digit alphanumeric code.  Each column represents an interest, which are labeled along the top of the data file.  The entries are the number of posts by a given user that fell into the given category.  Two interests of note here are "spam" (i.e. unsolicited advertising) and "adult" (posts that are pornographic, salacious, or explicitly sexual).  There are a lot of spam and pornography ["bots" on Twitter](http://mashable.com/2013/11/08/twitter-spambots/); while these have been filtered out of the data set to some extent, there will certainly be some that slip through.  There's also an "uncategorized" label.  Annotators were told to use this sparingly, but it's there to capture posts that don't fit at all into any of the listed interest categories.  (A lot of annotators may used the "chatter" category for this as well.)  Keep in mind as you examine the data that you cannot expect perfect annotations of all posts.  Some annotators might have simply been asleep at the wheel some, or even all, of the time!  Thus there is some inevitable error and noisiness in the annotation process.
+Each row of [social_marketing.csv](5.%20Market%20segmentation/social_marketing.csv) represents one user, labeled by a random (anonymous, unique) 9-digit alphanumeric code.  Each column represents an interest, which are labeled along the top of the data file.  The entries are the number of posts by a given user that fell into the given category.  Two interests of note here are "spam" (i.e. unsolicited advertising) and "adult" (posts that are pornographic, salacious, or explicitly sexual).  There are a lot of spam and pornography ["bots" on Twitter](http://mashable.com/2013/11/08/twitter-spambots/); while these have been filtered out of the data set to some extent, there will certainly be some that slip through.  There's also an "uncategorized" label.  Annotators were told to use this sparingly, but it's there to capture posts that don't fit at all into any of the listed interest categories.  (A lot of annotators may used the "chatter" category for this as well.)  Keep in mind as you examine the data that you cannot expect perfect annotations of all posts.  Some annotators might have simply been asleep at the wheel some, or even all, of the time!  Thus there is some inevitable error and noisiness in the annotation process.
 
 Your task to is analyze this data as you see fit, and to prepare a concise report for NutrientH20 that identifies any interesting market segments that appear to stand out in their social-media audience.  You have complete freedom in deciding how to pre-process the data and how to define "market segment." (Is it a group of correlated interests?  A cluster?  A latent factor?  Etc.)  Just use the data to come up with some interesting, well-supported insights about the audience, and be clear about what you did.
 
 ### Solution
 
-- [Market Segmentation](../exercises/5.%20Market%20segmentation/MarketSegmentation.ipynb)
+- [Market Segmentation](5.%20Market%20segmentation/MarketSegmentation.ipynb)
 
 
 
@@ -210,7 +210,7 @@ This question will be graded according to three criteria:
 
 ### Solution
 
-- [The Reuters Corpus](../exercises/5.%20Market%20segmentation/MarketSegmentation.ipynb)
+- [The Reuters Corpus](5.%20Market%20segmentation/MarketSegmentation.ipynb)
 
 
 # ----------------------------------------------------
