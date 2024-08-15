@@ -15,7 +15,7 @@ Suppose someone tests positive. What is the probability that they have the disea
 
 ### Solution 
 
-- [Probability Solution](0.%20Probability/Probability.ipynb)
+- [Probability Solution](0.%20Probability/Improved_Probability.ipynb)
 
 
 # ----------------------------------------------------
