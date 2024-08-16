@@ -2,6 +2,10 @@
 
 [Link for Questions](https://github.com/jgscott/STA380/tree/master/exercises)
 
+# Group Members :
+### Mykyta Zavhorodko, John Izzo, Akash Barathan & Pranav Garg
+
+
 # ----------------------------------------------------
 ## Probability practice
 
