@@ -75,7 +75,7 @@
 # ----------------------------------------------------
 ## 🛒 Association Rule Mining
 
-Revisit the notes on association rule mining and the R example on music playlists: [playlists.R](7.%20Association%20rule%20mining/playlists.R) and [playlists.csv](7.%20Association%20rule%20mining/playlists.csv).  
+📂 Revisit the notes on association rule mining and the R example on music playlists: [playlists.R](7.%20Association%20rule%20mining/playlists.R) and [playlists.csv](7.%20Association%20rule%20mining/playlists.csv).  
 Then use the data on grocery purchases in [groceries.txt](7.%20Association%20rule%20mining/groceries.txt) 
 
 ### 📝 Solution
