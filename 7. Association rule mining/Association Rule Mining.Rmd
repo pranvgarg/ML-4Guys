@@ -1,0 +1,137 @@
+---
+title: "Association rule mining"
+author: "4Guys"
+date: "2024-08-16"
+output: pdf_document
+---
+## Association rule mining
+
+First, let's load all the necessary libraries and create an association table
+```{r include=FALSE}
+library(tidyverse)
+library(igraph)
+library(arules)
+library(arulesViz)
+library(readr)
+library(tidyr)
+
+
+groceries_raw <- read_delim("groceries.txt", 
+                        delim = ";", escape_double = FALSE, col_names = FALSE, 
+                        trim_ws = TRUE)
+
+#adding index column to each basket
+groceries_raw$index <- rownames(groceries_raw)
+
+
+#this code breaks the basket into separate items while preserving the index
+groceries <- groceries_raw %>%
+  separate_rows(X1, sep = ",")
+
+groceries$index <- as.numeric(groceries$index)
+
+groceries$index <- factor(groceries$index)
+
+#splitting becased on index
+groceries = split(x=groceries$X1, f=groceries$index)
+
+groceries_trans = as(groceries, "transactions")
+
+#apriori sorting
+grocrules = apriori(groceries_trans, 
+                     parameter=list(support=.005, confidence=.1, maxlen=6))
+```
+
+After doing that, we can print out the entire association table and plot it.
+```{r}
+#all combinations
+# inspect(grocrules)
+
+#let's plot it to see the spread of confidence
+plot(grocrules)
+
+```
+First of all, it is worth mentioning what products are often bought with or without association with other products:
+
+* bottled water (11% of all baskets)
+
+* tropical fruits (10.5% of all baskets)
+
+  + Probably bananas, as it is the most popular tropical fruit
+  
+* root and other vegetables (30% of all baskets)
+
+* soda (17.4% of all baskets)
+
+* yogurt (14% of all baskets)
+
+* rolls/buns (18.4% of all baskets)
+
+* whole milk (25.5% of all baskets)
+
+  + every fourth basket contains milk
+
+Now, we can get some interesting associations:
+
+In this table, we can see the items with very high confidence and high lift:
+```{r}
+inspect(subset(grocrules, subset=lift > 2 & confidence > 0.5))
+```
+Only one pair stood out significantly:
+
+* baking powder & whole milk (0.009,0.52,2)
+
+  + 0.9% of all baskets contain baking powder, but more than half of them also contain milk. People use both baking powder and milk in baking, that's why they are often bought together (52% of people buying baking powder will buy milk). At the same time, people who just buy milk are not as likely to also buy baking powder, because they might be buying milk for other purposes
+  
+  + This is an interesting association, as these two products are not usually associated together. Also, they are not located closely to each other (one is in Dairy, while the other one is in Baking)
+  
+Let's decrease our confidence while increasing the lift (we need to see some good associations among uncommon products):
+```{r}
+inspect(subset(grocrules, subset=lift > 3 & confidence > 0.1))
+```
+
+* herbs & root vegetables (0.007,0.43,3.95)
+
+  + People who buy herbs are very likely to also buy root vegetables
+  
+  + Somewhat expected association, as they are sold in the same section
+
+* ham & white bread (0.005, 0.19/0.12, 4.63, both ways)
+
+  + This association goes both ways: not only from ham to bread, but also from bread to ham
+  
+  + People who buy either ham or bread are somewhat likely to buy the other one to make sandwiches
+  
+  + Very expected association, because ham on white bread is one of the most popular sandwiches
+  
+* berries & whipped/sour cream (0.009, 0.27/0.12, 3.8, both ways)
+
+  + Although this association also goes both ways, the confidence of whipped/sour cream to berries is much lower than the other way around
+  
+  + People often buy berries and whipped cream together for deserts
+  
+  + Somewhat expected association, as deserts with whipped cream often have berries in them
+  
+* waffles & chocolate (0.005, 0.15/0.11, 3, both ways) 
+
+  + Every seventh person who buys waffles also buys chocolate to
+  
+  + Chocolate is one of the toppings for waffles, so people buy them together
+  
+* chicken & frozen vegetables (0.006, 0.15/0.14, 3.25, both ways)
+
+  + The confidence is almost the same both ways: if a person either buys chicken or frozen vegetables, the chance is 15% that they will buy the other one as well
+  
+  + This is a known combination (for soups or stir-fries), but such a high confidence is surprising
+
+* beef & root vegetables (0.017, 0.33/0.15, 3, both ways)
+
+  + Just like with chicken & vegetables, people buy beef and vegetables together.
+  
+
+Let's try decreasing both confidence and lift:
+```{r}
+inspect(subset(grocrules, subset=lift > 1 & confidence > 0.1))
+```
+These associations are somewhat random. Above, we captured the most important ones. Let's now graph it.
+  
