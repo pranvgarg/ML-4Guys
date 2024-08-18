@@ -79,7 +79,11 @@
 Then use the data on grocery purchases in [groceries.txt](7.%20Association%20rule%20mining/groceries.txt) 
 
 ### 📝 Solution
- - [Association Rule Mining](7.%20Association%20rule%20mining/AssociationRuleMining.ipynb)
+ - [Association Rule Mining](7.%20Association%20rule%20mining/Association%20Rule%20Mining.Rmd)
+ - [Association Rule Mining PDF](7.%20Association%20rule%20mining/Association-Rule-Mining.pdf)
+ - [graphml file](7.%20Association%20rule%20mining/association_graph.gephi)
+ - [Video](7.%20Association%20rule%20mining/Video.mp4)
+ - [Snapshot](7.%20Association%20rule%20mining/Snapshot.png)
 
 
 # ----------------------------------------------------
