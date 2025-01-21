@@ -86,15 +86,4 @@ Then use the data on grocery purchases in [groceries.txt](7.%20Association%20rul
  - [Snapshot](7.%20Association%20rule%20mining/Snapshot.png)
 
 
-# ----------------------------------------------------
-## 🖼️ Image Classification with Neural Networks
-
-📂 [data/EuroSAT_RGB](https://github.com/jgscott/STA380/tree/master/data/EuroSAT_RGB) 
-
-or
-
-📂 [EuroSAT_RGB](8.%20Image%20classification%20with%20neural%20networks/EuroSAT_RGB/)
-
-### 📝 Solution
- - [Image Classification with Neural Networks](8.%20Image%20classification%20with%20neural%20networks/Image%20classification%20with%20neural%20networks.ipynb)
 
